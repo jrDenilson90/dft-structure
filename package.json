@@ -1,0 +1,23 @@
+{
+    "name": "projeto-dafiti",
+    "version": "1.0.0",
+    "description": "Projeto usando Pug, Sass e JS com Gulp",
+    "main": "gulpfile.js",
+    "scripts": {
+        "prod": "gulp build",
+        "dev": "gulp watch"
+    },
+    "devDependencies": {
+        "browser-sync": "^3.0.3",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-pug": "^4.0.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.32.0",
+        "del": "^6.0.0"
+    }
+}

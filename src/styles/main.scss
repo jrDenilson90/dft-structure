@@ -1,0 +1,12 @@
+// @use 'import scss templates';
+@use './../views/templates/teste/style.scss' as templateTeste;
+
+// @use 'import scss components';
+@use './../views/components/teste/style.scss' as componentTeste;
+
+.dafitiStructure * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
