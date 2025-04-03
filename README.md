@@ -1,16 +1,66 @@
-# NOME DO PROJETO
+# Documentação do Projeto
 
-[Descrição]
-Este projeto foi desenvolvido inicialmente para atender a um projeto de templetização. A ideia é evoluir para uma arquitetura baseada em componentes e otimizar o desenvolvimento de páginas responsivas.
+## Visão Geral
 
-[Pré-requisitos]
-Para rodar este projeto, você deve ter o Node.js instalado e atualizado em sua máquina. Além disso, você precisará das seguintes ferramentas:
+Este projeto é uma aplicação web que utiliza Pug para templates HTML, Sass para estilos CSS, e JavaScript puro para funcionalidades interativas. O Gulp é usado como ferramenta de automação para compilar, minificar e servir os arquivos durante o desenvolvimento.
 
-Node.js: Certifique-se de ter a versão mais recente instalada.
-Pug: Motor de templates para gerar HTML.
-Gulp: Ferramenta de automação de tarefas.
+## Estrutura do Projeto
 
-[Comandos Disponíveis]
-npm install: Instala as dependências do projeto.
-npm run prod: Compila os arquivos e gera a pasta dist.
-npm run dev: Inicia o modo de desenvolvimento com observação de mudanças e compilação automática.
+dft-stucture/
+│
+├── src/
+│   ├── styles/
+│   │   ├── default.scss       # Importa estilos de templates e componentes
+│   │   └── main.scss          # Importa default.scss e define estilos globais
+│   ├── views/
+│   │   ├── templates/
+│   │   │   ├── teste/
+│   │   │   │   ├── index.pug  # Template Pug
+│   │   │   │   ├── style.scss # Estilos específicos do template
+│   │   │   │   └── script.js  # Funcionalidades JavaScript do template
+│   └── scriptExternal/
+│       └── ...                # Scripts externos não desenvolvidos pelo time
+│
+├── dist/                      # Arquivos compilados e prontos para produção
+├── gulpfile.js                # Configuração do Gulp para automação de tarefas
+├── package.json               # Configuração do projeto e dependências
+└── README.md                  # Documentação do projeto
+
+
+## Funcionalidades
+
+### Pug
+
+- **Templates**: Utiliza Pug para criar templates HTML de forma concisa e legível.
+- **Componentização**: Cada template é modular, permitindo fácil reutilização e manutenção.
+
+### Sass
+
+- **Estilos Modulares**: Usa Sass para criar estilos modulares e reutilizáveis.
+- **Importação**: `default.scss` importa estilos de templates e componentes, enquanto `main.scss` importa `default.scss` e define estilos globais.
+
+### JavaScript
+
+- **Funcionalidades Interativas**: Scripts JavaScript são usados para adicionar interatividade aos templates.
+- **Organização**: Scripts são organizados por template, facilitando a manutenção.
+
+### Gulp
+
+- **Automação de Tarefas**: Gulp é usado para compilar Pug, Sass, e JavaScript, além de minificar e concatenar arquivos.
+- **Servidor de Desenvolvimento**: Usa `browser-sync` para servir arquivos e atualizar o navegador automaticamente durante o desenvolvimento.
+- **Observação de Arquivos**: Observa mudanças nos arquivos de origem e recompila automaticamente.
+
+## Scripts do NPM
+
+- **`npm run prod`**: Compila todos os arquivos para produção, criando a pasta `dist`.
+- **`npm run dev`**: Inicia o servidor de desenvolvimento e observa mudanças nos arquivos.
+
+## Como Executar
+
+1. **Instalar Dependências**: Execute `npm install` para instalar todas as dependências necessárias.
+2. **Produção**: Execute `npm run prod` para compilar os arquivos para produção.
+3. **Desenvolvimento**: Execute `npm run dev` para iniciar o servidor de desenvolvimento.
+
+## Considerações Finais
+
+Este projeto é projetado para ser modular e escalável, facilitando a adição de novos templates e componentes. A automação com Gulp melhora a eficiência do desenvolvimento, permitindo foco na criação de funcionalidades e estilos.
