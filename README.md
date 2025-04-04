@@ -37,7 +37,7 @@ dft-stucture/
 ### Sass
 
 - **Estilos Modulares**: Usa Sass para criar estilos modulares e reutilizáveis.
-- **Importação**: `default.scss` importa estilos de templates e componentes, enquanto `main.scss` importa `default.scss` e define estilos globais.
+- **Importação**: `imports.scss` importa estilos de templates e componentes, enquanto `main.scss` importa `imports.scss` e define estilos globais.
 
 ### JavaScript
 

@@ -1,0 +1,5 @@
+// @use 'import scss templates';
+@use './../views/templates/teste/style.scss' as templateTeste;
+
+// @use 'import scss components';
+@use './../views/components/teste/style.scss' as componentTeste;
